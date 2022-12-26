@@ -1,47 +1,36 @@
 import React from 'react'
 
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Box } from '@mui/material';
 import {styled} from '@mui/material/styles';
 
-const PREFIX = 'MyBook';
-const classes = {
-  root: `${PREFIX}-root`,
-  cta: `${PREFIX}-cta`,
-  content: `${PREFIX}-content`,
-}
-const Root = styled('div')(({ theme }) => ({
-  [`&.${classes.root}`]: {
-    display: 'flex',
-    alignItems: 'center',
-    backgroundColor: theme.palette.primary.main
-  },
-  [`& .${classes.cta}`]: {
-    transform: 'rotate(180deg)',
-    marginLeft: '5px',
-    height: '35%',
-    backgroundColor: 'purple',
-    alignSelf: 'self-end'
-  },
-  [`& .${classes.content}`]: {
-    color: theme.palette.common.white,
-    writingMode: 'vertical-lr',
-    padding: '5px',
-    margin:'auto',
-  },
-}))
 
-const Book = ({name, styleContainer, styleFont}) => {
+const wrapperGrid={
+  transform: 'rotate(180deg)',
+  margin: 'unset',
+}
+
+const wrapperTypograhy={
+    writingMode: 'vertical-lr',
+    padding: '1px',
+    margin:'auto',
+    height:'min-content',
+    wordWrap:'break-word',
+    boxSizing: 'inherit',
+    hyphens: 'auto'
+  }
+
+const Book = ({id, name, styleShape, styleFont, onClick}) => {
   return (
-    
-      <Grid item xs={3} style={{'align-self':'self-end'}} >
-        <Root>
-          <div className={classes.cta} style={styleContainer}>
-              <Typography variant="h5" className={classes.content} style={styleFont}>
-                  {name}
-              </Typography>
-          </div>
-        </Root>
-    </Grid>
+      <Grid 
+        item xs={3} 
+        sx={wrapperGrid}
+        style={styleShape}
+        onClick={()=>onClick(id)}
+        >
+            <Typography variant="h5" sx={wrapperTypograhy} style={styleFont}>
+                {name}
+            </Typography>
+      </Grid>
   )
 }
 

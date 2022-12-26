@@ -8,8 +8,12 @@ import Book from './components/Book'
 import Desktop from './components/Desktop'
 import theme from './themeConfig'; 
 
+
+
 const App=()=> {
+  
   const [books,setBooks]=useState();
+  const [descriptionBook, setDescriptionBook]=useState('Take a book for see its description');
 
   useEffect(()=>{
     async function getBooks(){
@@ -20,14 +24,19 @@ const App=()=> {
     getBooks();
   },[]);
 
+  function handleSelectedBook(bookId){
+    const selectedBookDescription=books[bookId-1].description;
+    setDescriptionBook(selectedBookDescription);
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container>
-        <Grid item container xs={6} alignContent='baseline' spacing={6}>
-          {books && books.length>0 ? books.map((book)=><Book key={book.id} {...book}/>):null}
+        <Grid item container xs={6} alignItems='flex-end'>
+          {books && books.length>0 ? books.map((book)=><Book key={book.id} {...book} onClick={handleSelectedBook}/>):null}
         </Grid>
         <Grid item container xs={6}>
-          <Desktop description={setBooks}/>
+          <Desktop description={descriptionBook}/>
         </Grid>
       </Grid>
     </ThemeProvider>

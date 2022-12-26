@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Desktop = () => {
+const Desktop = ({description}) => {
   return (
-    <div>Desktop</div>
+    <div style={{margin:'auto', height:'25%', backgroundColor:'white'}}>{description}</div>
   )
 }
 
