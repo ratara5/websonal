@@ -3,52 +3,138 @@
     {
       "description": "Electricity, Instalations, Dessign",
       "id": 1,
-      "name": "Electrical Engineering"
+      "name": "Electrical Engineering",
+      "styleContainer":{
+        "backgroundColor": "pink"
+      },
+      "styleFont":{
+        "fontStyle":"italic",
+        "fontWeight":"bold",
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "Color, Shapes, Content",
       "id": 2,
-      "name": "Graphic Design"
+      "name": "Graphic Design",
+      "styleContainer":{
+        "backgroundColor": "blue"
+      },
+      "styleFont":{
+        "fontWeight":400,
+        "fontFamily":"Roboto",
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "God, Bible, Ministry",
       "id": 3,
-      "name": "Spirituality"
+      "name": "Spirituality",
+      "styleContainer":{
+        "backgroundColor": "purple"
+      },
+      "styleFont":{
+        "fontStyle":"none",
+        "fontFamily":"Arial",
+        "fontWeight":500,
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "Maths, Physics, Education",
       "id": 4,
-      "name": "Teaching"
+      "name": "Teaching",
+      "styleContainer":{
+        "backgroundColor": "green"
+      },
+      "styleFont":{
+        "fontFamily":"Castellar",
+        "fontStyle":"oblique 20deg",
+        "fontWeight":200,
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "Cardiovascular, Digestive, Skin",
       "id": 5,
-      "name": "Health"
+      "name": "Health",
+      "styleContainer":{
+        "backgroundColor": "lightblue"
+      },
+      "styleFont":{
+        "fontStyle":"italic",
+        "fontFamily":"Times New Roman",
+        "fontWeight":300,
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "World Championship, Chelsea, Fresstyle",
       "id": 6,
-      "name": "Soccer"
+      "name": "Soccer",
+      "styleContainer":{
+        "backgroundColor": "orange"
+      },
+      "styleFont":{
+        "fontFamily":"Comic Sans MS",
+        "fontWeight":"bold",
+        "letterSpacing":"5px"
+      }
     },
     {
       "description": "Elegant, Blue, Shoes",
       "id": 7,
-      "name": "Clothes"
+      "name": "Clothes",
+      "styleContainer":{
+        "backgroundColor": "gray"
+      },
+      "styleFont":{
+        "fontFamily":"Verdana",
+        "fontStyle":"none",
+        "letterSpacing":"2px"
+      }
     },
     {
       "description": "Miel, Black, Houses",
       "id": 8,
-      "name": "Cats"
+      "name": "Cats",
+      "styleContainer":{
+        "backgroundColor": "lightgreen"
+      },
+      "styleFont":{
+        "fontFamily":"Ink Free",
+        "fontStyle":"italic",
+        "fontWeight":"bold",
+        "letterSpacing":"3px"
+      }
     },
     {
       "description": "Parents, Brothers, Travels",
       "id": 9,
-      "name": "Family"
+      "name": "Family",
+      "styleContainer":{
+        "backgroundColor": "yellow"
+      },
+      "styleFont":{
+        "fontFamily":"Century Gothic",
+        "fontStyle":"none",
+        "fontWeight":"bold",
+        "letterSpacing":"10px"
+      }
     },
     {
       "description": "Cook, Dinner, Pie",
       "id": 10,
-      "name": "Food"
+      "name": "Food",
+      "styleContainer":{
+        "backgroundColor": "lightcoral"
+      },
+      "styleFont":{
+        "fontFamily":"Caveat",
+        "fontStyle":"italic",
+        "fontWeight":"bold",
+        "letterSpacing":"3px"
+      }
     }
   ]
 }

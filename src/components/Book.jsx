@@ -20,23 +20,23 @@ const Root = styled('div')(({ theme }) => ({
     marginLeft: '5px',
     height: '35%',
     backgroundColor: 'purple',
-    
+    alignSelf: 'self-end'
   },
   [`& .${classes.content}`]: {
     color: theme.palette.common.white,
     writingMode: 'vertical-lr',
     padding: '5px',
-    margin:"auto",
+    margin:'auto',
   },
 }))
 
-const Book = ({name}) => {
+const Book = ({name, styleContainer, styleFont}) => {
   return (
     
-      <Grid item xs={3}>
+      <Grid item xs={3} style={{'align-self':'self-end'}} >
         <Root>
-          <div className={classes.cta}>
-              <Typography variant="h5" className={classes.content}>
+          <div className={classes.cta} style={styleContainer}>
+              <Typography variant="h5" className={classes.content} style={styleFont}>
                   {name}
               </Typography>
           </div>
