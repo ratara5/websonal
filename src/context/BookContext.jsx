@@ -5,8 +5,8 @@ export const BookContext=createContext()
 export function BookContextProvider(props) {
 
   const [books,setBooks]=useState();
-
-  const [descriptionBook, setDescriptionBook]=useState('Take a book for see its description');
+  const initialDescriptionText={bookId: 0, bookDescription: "Take a book for see its description", bookColor:"transparent", bookIcon:""}
+  const [descriptionBook, setDescriptionBook]=useState(initialDescriptionText);
 
   useEffect(()=>{
     async function getBooks(){
@@ -17,8 +17,8 @@ export function BookContextProvider(props) {
     getBooks();
   },[]);
 
-  function handleSelectedBook(bookId, bookDescription) {
-    const selectedBookDescription=bookDescription;
+  function handleSelectedBook(bookId, bookDescription, bookColor, bookIcon) {
+    const selectedBookDescription={bookId,bookDescription,bookColor,bookIcon};
     setDescriptionBook(selectedBookDescription);
   }
 

@@ -12,10 +12,11 @@ const App=()=> {
   
   return (
     <ThemeProvider theme={theme}>
-      <Box textAlign='center'>
+      <Box textAlign='center' sx={{'& button':{m:'auto', mt:1}}} display='flex'>
         <Button variant='outlined' onClick={()=>{
-          setVisibility(!visibility)}}>
-            {visibility ? '¡OFF!' : '¡ON!'}
+          setVisibility(!visibility)}} size='large'>
+            {visibility ? '¡OFF!' : '¡ON!'
+          }
         </Button>
       </Box>
       {visibility ? 

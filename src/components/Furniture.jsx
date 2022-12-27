@@ -1,7 +1,3 @@
-import React, {useEffect, useState, useContext} from 'react'
-
-import {BookContext} from '../context/BookContext'
-
 import {Box, Grid} from '@mui/material'
 
 import Library from './Library';
@@ -12,7 +8,7 @@ const Furniture = ({visibilityFurniture}) => {
   return (
     <Box id='office' display={visibilityFurniture}>
         <Grid container>
-            <Grid item container xs={6} alignItems='flex-end'>
+            <Grid item container xs={6}>
                 <Library/>
             </Grid>
             <Grid item container xs={6}>

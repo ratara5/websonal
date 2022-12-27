@@ -34,10 +34,11 @@ const Book = ({id, name, description, styleShape, styleFont, icon}) => {
 
   return (
       <Grid 
-        item xs={3} 
+        item
+        xs={3}
         sx={wrapperGrid}
         style={styleShape}
-        onClick={()=>handleSelectedBook(id, description)}
+        onClick={()=>handleSelectedBook(id, description, styleShape.backgroundColor, icon)}
         >
             <Box textAlign='center' sx={{transform:'rotate(180deg)'}}>
               <Icon>
