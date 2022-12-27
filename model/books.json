@@ -12,7 +12,8 @@
         "fontStyle":"italic",
         "fontWeight":"bold",
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"bolt"
     },
     {
       "description": "Color, Shapes, Content",
@@ -26,7 +27,8 @@
         "fontWeight":400,
         "fontFamily":"Roboto",
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"design_services"
     },
     {
       "description": "God, Bible, Ministry",
@@ -41,7 +43,8 @@
         "fontFamily":"Arial",
         "fontWeight":500,
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"star"
     },
     {
       "description": "Maths, Physics, Education",
@@ -56,7 +59,8 @@
         "fontStyle":"oblique 20deg",
         "fontWeight":200,
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"school"
     },
     {
       "description": "Cardiovascular, Digestive, Skin",
@@ -71,7 +75,8 @@
         "fontFamily":"Times New Roman",
         "fontWeight":300,
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"health_and_safety"
     },
     {
       "description": "World Championship, Chelsea, Fresstyle",
@@ -85,7 +90,8 @@
         "fontFamily":"Comic Sans MS",
         "fontWeight":"bold",
         "letterSpacing":"5px"
-      }
+      },
+      "icon":"sports_soccer"
     },
     {
       "description": "Elegant, Blue, Shoes",
@@ -99,7 +105,8 @@
         "fontFamily":"Verdana",
         "fontStyle":"none",
         "letterSpacing":"2px"
-      }
+      },
+      "icon":"check_room"
     },
     {
       "description": "Miel, Black, Houses",
@@ -114,7 +121,8 @@
         "fontStyle":"italic",
         "fontWeight":"bold",
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"pets"
     },
     {
       "description": "Parents, Brothers, Travels",
@@ -129,7 +137,8 @@
         "fontStyle":"none",
         "fontWeight":"bold",
         "letterSpacing":"10px"
-      }
+      },
+      "icon":"diversity_2"
     },
     {
       "description": "Cook, Dinner, Pie",
@@ -144,7 +153,8 @@
         "fontStyle":"italic",
         "fontWeight":"bold",
         "letterSpacing":"3px"
-      }
+      },
+      "icon":"cookie"
     }
   ]
 }

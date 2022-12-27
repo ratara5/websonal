@@ -1,12 +1,19 @@
 import React from 'react'
 
-import { Typography, Grid } from '@mui/material';
+import { Icon, Typography, Grid, Box } from '@mui/material';
 import {styled} from '@mui/material/styles';
 
 
 const wrapperGrid={
   transform: 'rotate(180deg)',
   margin: 'unset',
+  border: '2px solid gray',
+  borderRadius:'15px',
+  '&:hover':{
+    backgroundColor:'gray',
+    opacity:'0.8',
+    cursor:'pointer'
+  }
 }
 
 const wrapperTypograhy={
@@ -19,7 +26,7 @@ const wrapperTypograhy={
     hyphens: 'auto'
   }
 
-const Book = ({id, name, description, styleShape, styleFont, onClick}) => {
+const Book = ({id, name, description, styleShape, styleFont, icon, onClick}) => {
   return (
       <Grid 
         item xs={3} 
@@ -27,6 +34,11 @@ const Book = ({id, name, description, styleShape, styleFont, onClick}) => {
         style={styleShape}
         onClick={()=>onClick(id, description)}
         >
+            <Box textAlign='center' sx={{transform:'rotate(180deg)'}}>
+              <Icon>
+                {icon}
+              </Icon>
+            </Box>
             <Typography variant="h5" sx={wrapperTypograhy} style={styleFont}>
                 {name}
             </Typography>
