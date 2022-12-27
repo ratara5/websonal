@@ -19,13 +19,13 @@ const wrapperTypograhy={
     hyphens: 'auto'
   }
 
-const Book = ({id, name, styleShape, styleFont, onClick}) => {
+const Book = ({id, name, description, styleShape, styleFont, onClick}) => {
   return (
       <Grid 
         item xs={3} 
         sx={wrapperGrid}
         style={styleShape}
-        onClick={()=>onClick(id)}
+        onClick={()=>onClick(id, description)}
         >
             <Typography variant="h5" sx={wrapperTypograhy} style={styleFont}>
                 {name}
