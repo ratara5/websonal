@@ -1,5 +1,7 @@
 import React, {useContext} from 'react'
 
+import { useTransition, useState } from 'react';
+
 import { BookContext } from '../context/BookContext';
 
 import { Icon, Typography, Grid, Box } from '@mui/material';
@@ -12,9 +14,8 @@ const wrapperGrid={
   border: '2px solid gray',
   borderRadius:'15px',
   '&:hover':{
-    backgroundColor:'gray',
-    opacity:'0.8',
-    cursor:'pointer'
+    transition: "all 1s ease-in-out",
+    color: 'gray'
   }
 }
 
@@ -32,13 +33,19 @@ const Book = ({id, name, description, styleShape, styleFont, icon}) => {
 
   const {handleSelectedBook}=useContext(BookContext);
 
+  const [onOff, setOnOff] = useState(true)
+  const {stage, shouldMount} = useTransition(onOff, 150)
+
+
   return (
       <Grid 
         item
         xs={3}
         sx={wrapperGrid}
         style={styleShape}
-        onClick={()=>handleSelectedBook(id, description, styleShape.backgroundColor, icon)}
+        onClick={()=>
+          handleSelectedBook(id, description, styleShape.backgroundColor, icon)
+        }
         >
             <Box textAlign='center' sx={{transform:'rotate(180deg)'}}>
               <Icon>

@@ -12,7 +12,8 @@ const App=()=> {
   
   return (
     <ThemeProvider theme={theme}>
-      <Box textAlign='center' sx={{'& button':{m:'auto', mt:1}}} display='flex'>
+      <Box textAlign='center' 
+      sx={{'& button':{m:'auto', mt:1}}} display='flex'>
         <Button variant='outlined' onClick={()=>{
           setVisibility(!visibility)}} size='large'>
             {visibility ? '¡OFF!' : '¡ON!'
