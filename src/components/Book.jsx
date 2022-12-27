@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
+
+import { BookContext } from '../context/BookContext';
 
 import { Icon, Typography, Grid, Box } from '@mui/material';
 import {styled} from '@mui/material/styles';
@@ -26,13 +28,16 @@ const wrapperTypograhy={
     hyphens: 'auto'
   }
 
-const Book = ({id, name, description, styleShape, styleFont, icon, onClick}) => {
+const Book = ({id, name, description, styleShape, styleFont, icon}) => {
+
+  const {handleSelectedBook}=useContext(BookContext);
+
   return (
       <Grid 
         item xs={3} 
         sx={wrapperGrid}
         style={styleShape}
-        onClick={()=>onClick(id, description)}
+        onClick={()=>handleSelectedBook(id, description)}
         >
             <Box textAlign='center' sx={{transform:'rotate(180deg)'}}>
               <Icon>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
 import {Box, Button} from '@mui/material'
 import { ThemeProvider } from '@emotion/react';
@@ -8,8 +8,7 @@ import Furniture from './components/Furniture';
 
 const App=()=> {
 
-  const [visibility, setVisibility]=useState();
-  const [buttonText, setButtonText]=useState();
+  const [visibility, setVisibility]=useState();//Somethings maybe better out of BookContext
   
   return (
     <ThemeProvider theme={theme}>
@@ -20,9 +19,9 @@ const App=()=> {
         </Button>
       </Box>
       {visibility ? 
-      <Furniture myDisplay='block'/>
+      <Furniture visibilityFurniture='block'/>
       :
-      <Furniture myDisplay='none'/>
+      <Furniture visibilityFurniture='none'/>
       }
     </ThemeProvider>
   );

@@ -1,29 +1,22 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
+
+import {BookContext} from '../context/BookContext'
 
 import {Box, Grid} from '@mui/material'
 
 import Library from './Library';
 import Desktop from './Desktop';
 
-const Furniture = ({myDisplay}) => {
-
-  
-  const [descriptionBook, setDescriptionBook]=useState('Take a book for see its description');
-
-
-  function handleSelectedBook(bookId, bookDescription) {
-    const selectedBookDescription=bookDescription;
-    setDescriptionBook(selectedBookDescription);
-  }
+const Furniture = ({visibilityFurniture}) => {
 
   return (
-    <Box id='office' display={myDisplay}>
+    <Box id='office' display={visibilityFurniture}>
         <Grid container>
             <Grid item container xs={6} alignItems='flex-end'>
-                <Library handleSelectedBook={handleSelectedBook}/>
+                <Library/>
             </Grid>
             <Grid item container xs={6}>
-                <Desktop description={descriptionBook}/>
+                <Desktop/>
             </Grid>
         </Grid>
     </Box>

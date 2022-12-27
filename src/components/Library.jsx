@@ -1,25 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext} from 'react';
+import { BookContext } from '../context/BookContext';
 
 import Book from './Book';
 
-const Library = ({handleSelectedBook}) => {
-
-  const [books,setBooks]=useState();
-
-  useEffect(()=>{
-    async function getBooks(){
-      const result=await fetch('http://localhost:3001/books');
-      const response=await result.json();
-      setBooks(response);
-    }
-    getBooks();
-    },[]);
+const Library = () => {
+  const {books}=useContext(BookContext);
 
   return (
     <>
         {books && books.length>0 ? 
         books.map((book)=>
-        <Book key={book.id} {...book} onClick={handleSelectedBook}/>):
+        <Book key={book.id} {...book}/>):
         null}
     </>
   )

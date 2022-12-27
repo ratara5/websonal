@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { BookContext } from '../context/BookContext';
 
 import { Typography, Box } from '@mui/material';
 
 const Desktop = ({description}) => {
+
+  const {descriptionBook}=useContext(BookContext);
+
   return (
     <Box 
     sx={{margin:'auto', 
@@ -10,7 +14,7 @@ const Desktop = ({description}) => {
         backgroundColor:'white',
         textAlign:'center'}}>
         <Typography variant="h3">
-          {description}
+          {descriptionBook}
         </Typography>
     </Box>
   )
