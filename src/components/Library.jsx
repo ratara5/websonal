@@ -11,7 +11,7 @@ const Library = () => {
   const {books}=useContext(BookContext);
 
   return (
-    <Grid container alignItems='flex-end' spacing={5}>
+    <Grid sx={{m:'unset'}} container alignItems='flex-end' spacing={5}>
         {books && books.length>0 ? 
         books.map((book)=>
         <Book key={book.id} {...book}/>):

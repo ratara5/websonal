@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
-import {Box, Button} from '@mui/material'
+import {Box, Button, IconButton} from '@mui/material';
+import {Light} from '@mui/icons-material';
 import { ThemeProvider } from '@emotion/react';
 
 import theme from './themeConfig'; 
@@ -12,13 +13,12 @@ const App=()=> {
   
   return (
     <ThemeProvider theme={theme}>
-      <Box textAlign='center' 
-      sx={{'& button':{m:'auto', mt:1}}} display='flex'>
-        <Button variant='outlined' onClick={()=>{
+      <Box 
+      sx={{'& button':{m:'auto', mt:1, height:'content'}, '& svg':{height:'100px', width:'100px'}}} display='flex'>
+        <IconButton color={visibility ? 'accent' : 'primary'} onClick={()=>{
           setVisibility(!visibility)}} size='large'>
-            {visibility ? '¡OFF!' : '¡ON!'
-          }
-        </Button>
+          <Light/>
+        </IconButton>
       </Box>
       {visibility ? 
       <Furniture visibilityFurniture='block'/>

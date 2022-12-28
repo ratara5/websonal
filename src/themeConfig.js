@@ -1,7 +1,7 @@
 import {createTheme} from '@mui/material/styles';
 
 import blue from '@mui/material/colors/blue'
-import red from '@mui/material/colors/red'
+import yellow from '@mui/material/colors/yellow'
 import '@fontsource/roboto';
 
 const theme=createTheme({
@@ -14,7 +14,7 @@ const theme=createTheme({
             ContrastText:'#fff'
         },
         accent:{
-            main:red[500]
+            main:yellow[100]
         },
         typography:{
             fontFamily:"'Roboto', 'Helvetica', 'Arial', 'sans-serif'"
