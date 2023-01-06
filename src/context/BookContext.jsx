@@ -1,5 +1,7 @@
 import {createContext, useState, useEffect} from 'react' 
 
+import {backendBooks} from '../data/backendBooks';
+
 export const BookContext=createContext()
 
 export function BookContextProvider(props) {
@@ -9,12 +11,11 @@ export function BookContextProvider(props) {
   const [descriptionBook, setDescriptionBook]=useState(initialDescriptionText);
 
   useEffect(()=>{
-    async function getBooks(){
-      const result=await fetch('http://localhost:3001/books');
-      const response=await result.json();
-      setBooks(response);
+    function getBooks(data){
+
+      setBooks(data);
     }
-    getBooks();
+    getBooks(backendBooks);
   },[]);
 
   function handleSelectedBook(bookId, bookDescription, bookColor, bookIcon) {
