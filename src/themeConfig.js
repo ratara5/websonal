@@ -3,8 +3,9 @@ import {createTheme} from '@mui/material/styles';
 import blue from '@mui/material/colors/blue'
 import yellow from '@mui/material/colors/yellow'
 import '@fontsource/roboto';
+import { dark } from '@mui/material/styles/createPalette';
 
-const theme=createTheme({
+export const themeLight=createTheme({
     palette:{
         primary: blue,
         secondary:{
@@ -20,6 +21,19 @@ const theme=createTheme({
             fontFamily:"'Roboto', 'Helvetica', 'Arial', 'sans-serif'"
         }
     }
-})
+});
 
-export default theme;
+export const themeDark=createTheme({
+    palette:{
+        primary: blue,
+        accent:{
+            main:yellow[100]
+        },
+        background: {
+            default: '#000000'
+        },
+        text: {
+            primary: "#ffffff"
+          }
+    }
+});
