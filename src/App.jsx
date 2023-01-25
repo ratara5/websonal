@@ -18,7 +18,7 @@ const App=()=> {
 
   const onStyle={
     color: theme.palette.accent.main,
-    boxShadow: '2px 2px 2px yellow',
+    filter: 'drop-shadow(0 25px 35px '+theme.palette.accent.main+')'
   };
 
   const offStyle={
@@ -36,7 +36,7 @@ const App=()=> {
         </IconButton>
       </Box>
       {light ? 
-      <Furniture visibilityFurniture='block'/>
+      <Furniture visibilityFurniture='flex'/>
       :
       <Furniture visibilityFurniture='none'/>
       }
