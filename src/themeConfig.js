@@ -25,7 +25,9 @@ export const themeLight=createTheme({
 
 export const themeDark=createTheme({
     palette:{
-        primary: blue,
+        primary: {
+            main: blue[100]
+        },
         accent:{
             main:yellow[100]
         },
